@@ -23,6 +23,9 @@
     </a>
   </div>
 </div>
+<div class="my-4 text-center">
+  <app-qr-code [qrData]="'https://custom-url.com'"></app-qr-code>
+</div>
 <div class="container">
   <div *ngIf="carrierCards.length > 0; else cardsEmptyState">
     <div class="card p-0 mb-4 custom-card my-5 position-relative" *ngFor="let carrierCards of carrierCards; let i = index">

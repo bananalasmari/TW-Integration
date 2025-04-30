@@ -17,6 +17,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { ViewCardsButtonComponent } from './pages/home/view-cards-button/view-cards-button.component';
 import { CardViewComponent } from './pages/home/card-view/card-view.component';
 import { DocuemntsListComponent } from './pages/docuemnts-list/docuemnts-list.component';
+import { QrCodeComponent } from '../app/_shared/components/qr-code/qr-code.component';
+import { CommonModule } from '@angular/common';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -38,6 +40,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     HttpClientModule,
     LoaderComponent,
+    QrCodeComponent,
+    CommonModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

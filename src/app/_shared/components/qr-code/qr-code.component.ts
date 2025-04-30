@@ -5,7 +5,7 @@ import QRCodeStyling from 'qr-code-styling';
   selector: 'app-qr-code',
   templateUrl: './qr-code.component.html',
   styleUrls: ['./qr-code.component.scss'],
-  standalone: false,
+  standalone: true
 
 })
 export class QrCodeComponent implements AfterViewInit, OnChanges {
