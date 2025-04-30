@@ -1,0 +1,95 @@
+// control theme colors from here - you can add more variables from "_variables.scss"
+// By: Banan Alasmari & Abdulaziz Fahad I Bin Saif - ELM
+$primary: #01527A;
+$primary-dark: darken($primary, 15%) ;   
+$secondary: #00B384;   
+$tertiary: #265A94;
+$info: #4742AA;
+$family: 'Cairo';
+$bold: 'Cairo-Medium';
+$family-light: "Cairo-light";
+$extra-bold: 'Cairo-Bold';
+$success: #30E0A1 ;
+
+:root[dir="rtl"] {
+  text-align: right;
+  /* Add any additional RTL-specific styles here */
+}
+
+:root[dir="ltr"] {
+  text-align: left;
+  /* Add any additional LTR-specific styles here */
+}
+
+/* Default Light Mode (defined in :root) */
+:root {
+      --bs-primary: #4E96EA;
+      --bs-info: #4742AA;
+      --bs-primary-text: #4E96EA !important;
+      --bs-secondary-text: #1E1656 !important;
+      --bs-tertiary-text: #3F3F3F !important;
+      --bs-quaternary-text: #5967D1 !important;
+      --bs-body-font-family: 'din' !important; 
+      --bold-font-family: 'dinMeduim', sans-serif;
+      --extra-bold-font-family: 'dinBold', sans-serif;
+      --bs-card-border: #EFF4FB !important;
+      
+      --sector-background-color: #ECF1FA;
+
+      --bs-text-field-bg: #f7f7f7;
+
+      --bs-tab-active: #4189F4;
+
+      --bs-cards-active-tabs: #FFFFFF;
+      --bs-cards-tabs: #F6F7F7;
+      --bs-cards-text: #191A1A;
+
+      --bs-nav-active: #2a2a6e !important;
+      --bs-nav: #fff !important;
+      --bs-nav-onscroll: #606386 !important;
+
+      /* Light Mode Colors */
+      --background-color: #EFF4FB;
+      --text-color: #1E1656;
+      --card-background: #ffffff8c; 
+      --card-border-color: #C4C4C4; /* Light mode card border */
+      --button-background: #265A94;
+      --button-text-color: #fff;
+      --link-color: #4E96EA;
+      --btn-gradient-color-1: #fff; /* Dark mode button background */
+      --btn-gradient-color-2: #E0EAFF; /* Dark mode button background */
+
+      --card-gradient-color-1: #FFFFFF; /* Dark mode button background */
+      --card-gradient-color-2: #E0EAFF; /* Dark mode button background */
+
+      --btn-bg-color: #4E96EA; /* Light mode button background */
+      --btn-border-color: #4E96EA; /* Light mode button border */
+      --btn-text-color: #fff; /* Light mode button text color */
+      --btn-hover-bg-color: #4e97eab9; /* Light mode hover background */
+      --btn-hover-border-color: lighten(#4E96EA, 10%); /* Light mode hover border */
+      --btn-shadow: 0px 4px 12px rgba(208, 169, 240, 0.2); /* Light mode shadow */
+      --btn-hover-shadow: 0px 6px 15px rgba(184, 95, 255, 0.3); /* Light mode hover shadow */
+
+      .sector-image {
+        filter: brightness(0) saturate(100%) invert(41%) sepia(31%) saturate(1450%) hue-rotate(200deg) brightness(95%) contrast(90%) !important;
+      }
+}
+
+
+/* Additional styles for other elements in dark mode if needed */
+
+
+@import './rtl'; // to enable two directions support - remove this file if u use english only
+
+@import './layouts'; // to custom layouts
+
+@import './_reset'; // reset css with some useful extra style 
+ 
+@import './_custom'; // add your custom style here
+
+@import './dark'; // add your dark style here
+
+@import './_media-queries'; // empty media queries 
+ 
+
+ 
