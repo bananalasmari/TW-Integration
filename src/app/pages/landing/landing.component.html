@@ -1,0 +1,100 @@
+<section class="landing-page">
+  <div class="content container">
+    <div class="hero">
+      <div class="hero-text">
+        <h1>TWK Integration SDK</h1>
+        <p class="subtitle">
+          A ready‑to‑use Angular experience to integrate TWK capabilities (user data, theming,
+          media, and more) into your services with a secure, mobile‑friendly UI.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#quick-start">Get Started</a>
+          <a class="btn btn-outline-light" href="#documentation">View Documentation</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="../../../assets/images/landing-bg-orang.png" alt="" />
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card dark-card">
+        <h2>What is this SDK?</h2>
+        <p>
+          This project bundles an Angular UI that talks to the TWK native bridge through the
+          global <code>TWK</code> object (defined in <code>assets/js/twkhelper.js</code>).
+          It handles:
+        </p>
+        <ul>
+          <li>Reading user and device information from TWK APIs</li>
+          <li>Auto‑detecting device language and layout direction (LTR / RTL)</li>
+          <li>Applying light / dark appearance using the TWK capabilities endpoint</li>
+          <li>Displaying transport documents and carrier cards in a responsive layout</li>
+        </ul>
+      </div>
+
+      <div class="card dark-card" id="quick-start">
+        <h2>Quick integration</h2>
+        <ol>
+          <li>Host this Angular build in your web container or TWK webview.</li>
+          <li>Include the TWK helper script before the Angular bundle:</li>
+        </ol>
+        <pre><code>&lt;script src="assets/js/twkhelper.js"&gt;&lt;/script&gt;
+&lt;script src="main.js" type="module"&gt;&lt;/script&gt;</code></pre>
+        <ol start="3">
+          <li>Configure <code>TWKAPIBASE</code>, <code>SHAREDSECRET</code>, and <code>ENABLELOG</code> in your host.</li>
+          <li>Open this module from your native or web shell as an embedded service.</li>
+        </ol>
+      </div>
+    </div>
+
+    <section class="docs" id="documentation">
+      <h2>SDK documentation</h2>
+
+      <div class="docs-section">
+        <h3>Environment & configuration</h3>
+        <p>
+          The SDK expects the following globals to be configured by the host environment
+          <em>before</em> loading <code>assets/js/twkhelper.js</code>:
+        </p>
+        <ul>
+          <li><code>TWKAPIBASE</code> – Base URL for the TWK bridge API.</li>
+          <li><code>SHAREDSECRET</code> – Secret used to sign requests (HMAC‑SHA256).</li>
+          <li><code>ENABLELOG</code> – Optional boolean to enable verbose logging.</li>
+        </ul>
+      </div>
+
+      <div class="docs-section">
+        <h3>Appearance & dark mode</h3>
+        <p>
+          The <code>ThemeService</code> calls <code>TWK.getDeviceInfo()</code> and automatically
+          toggles a <code>dark-mode</code> class on the <code>&lt;body&gt;</code> element.
+          Dark‑theme tokens are defined in <code>assets/scss/_dark.scss</code>.
+        </p>
+        <p>
+          The landing page itself uses a fully black background to match a dark introduction
+          experience, while still respecting the global dark‑mode tokens for cards and text.
+        </p>
+      </div>
+
+      <div class="docs-section">
+        <h3>Key TWK helpers</h3>
+        <p>
+          The TWK helper exposes a set of methods on <code>window.TWK</code>, for example:
+        </p>
+        <ul>
+          <li><code>TWK.getUserFullName()</code> – used to display the signed‑in user.</li>
+          <li><code>TWK.getDeviceInfo()</code> – used for dark / light appearance.</li>
+          <li><code>TWK.getUserVehicles()</code> – can be used to build transport flows.</li>
+        </ul>
+        <p>
+          You can extend this Angular SDK by injecting your own services that wrap these calls,
+          or by adding new pages that consume the same helpers.
+        </p>
+      </div>
+    </section>
+  </div>
+</section>
+
+
+

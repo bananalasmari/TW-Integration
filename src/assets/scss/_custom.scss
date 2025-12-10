@@ -9,15 +9,6 @@
    Header Section
    ========================================================================== */
 header {
-    background-image: url("../images/header.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    height: 150px;
-    display: flex;
-    h4 {
-        font-family: $extra-bold;
-    }
 }
 
 .cards-layout {

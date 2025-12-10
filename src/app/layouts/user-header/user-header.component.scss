@@ -1,0 +1,64 @@
+.twk-header {
+  padding: 2rem 0 0.9rem 0;
+  color: #ffffff;
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .brand-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .brand-logo {
+    display: block;
+    height: 32px;
+    width: auto;
+
+    &.elm-logo {
+      max-width: 140px;
+    }
+
+    &.twk-logo {
+      max-width: 110px;
+    }
+  }
+
+  .divider {
+    width: 1px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .titles {
+    margin-inline-start: auto;
+  }
+
+  .main-title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    /* gradient between the two requested colors: #763CBC and #FF5D36 */
+    background:  #FF5D36;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  @media (max-width: 576px) {
+    .header-content {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .main-title {
+      font-size: 1rem;
+    }
+  }
+}
+

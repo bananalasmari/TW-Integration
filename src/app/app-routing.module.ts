@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { LandingComponent } from './pages/landing/landing.component';
 import { InnerLayoutsComponent } from './layouts/inner-layouts/inner-layouts.component';
 import { OuterLayoutsComponent } from './layouts/outer-layouts/outer-layouts.component';
 import { DocuemntsListComponent } from './pages/docuemnts-list/docuemnts-list.component';
@@ -9,7 +10,8 @@ const routes: Routes = [
     path: '',
     component: OuterLayoutsComponent,
     children: [
-      { path: '', component: HomeComponent }
+      { path: '', component: LandingComponent },
+      { path: 'home', component: HomeComponent }
     ]
   },
   {
